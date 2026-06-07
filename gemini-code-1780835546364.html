@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuarkEdge Solutions | Machine Vision & Automation Integration</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0f172a',
+                        brandGrid: '#1e293b',
+                        brandAccent: '#06b6d4', // Laser Cyan
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-brandAccent selection:text-brandDark">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="h-10 w-10 bg-gradient-to-tr from-brandAccent to-blue-600 rounded-lg flex items-center justify-center font-bold text-xl text-brandDark">
+                    Q
+                </div>
+                <span class="text-xl font-bold tracking-tight">QuarkEdge <span class="text-brandAccent">Solutions</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#capabilities" class="hover:text-brandAccent transition">Capabilities</a>
+                <a href="#ecosystem" class="hover:text-brandAccent transition">Ecosystem</a>
+                <a href="#why-us" class="hover:text-brandAccent transition">Why QuarkEdge</a>
+                <a href="#contact" class="bg-brandAccent text-brandDark px-5 py-2.5 rounded-md font-semibold hover:bg-cyan-400 transition">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative py-24 md:py-36 overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-cyan-500/10 text-brandAccent border border-cyan-500/20 mb-6">
+                <span class="w-2 h-2 rounded-full bg-brandAccent animate-pulse"></span> Next-Gen Vision Integration
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight">
+                Precision Vision. <br><span class="bg-gradient-to-r from-brandAccent to-blue-500 bg-clip-text text-transparent">Seamless Automation.</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
+                We engineer advanced machine vision architectures giving your industrial machinery the exact visual intelligence needed to inspect, guide, and execute flawlessly.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 bg-brandAccent text-brandDark font-bold rounded-md hover:bg-cyan-400 shadow-lg shadow-cyan-500/20 transition transform hover:-translate-y-0.5">
+                    Discuss Your Project
+                </a>
+                <a href="#capabilities" class="px-8 py-4 bg-slate-800 text-slate-200 font-bold rounded-md hover:bg-slate-700 transition border border-slate-700">
+                    Explore Capabilities
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Supported Ecosystem Banner -->
+    <section id="ecosystem" class="py-12 bg-slate-900/50 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-8">Supported Hardware & Software Ecosystems</p>
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 text-xl md:text-2xl font-bold text-slate-400 tracking-wide">
+                <span class="hover:text-slate-100 transition">COGNEX</span>
+                <span class="hover:text-slate-100 transition">KEYENCE</span>
+                <span class="hover:text-slate-100 transition">MVTec HALCON</span>
+                <span class="hover:text-slate-100 transition">BASLER</span>
+                <span class="hover:text-slate-100 transition">SENSOPART</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section id="capabilities" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold">Industrial Vision Capabilities</h2>
+            <p class="mt-4 text-slate-400">Tailored deployments using elite algorithmic frameworks and optimized hardware arrays.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-brandGrid p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
+                <div>
+                    <div class="h-12 w-12 bg-cyan-500/10 text-brandAccent rounded-lg flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Defect Detection & QC</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">High-speed, inline anomaly detection systems ensuring 100% cosmetic and structural quality control metrics.</p>
+                </div>
+                <span class="text-xs font-semibold text-brandAccent mt-6 block">Cognex In-Sight / Halcon Deep Learning</span>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-brandGrid p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
+                <div>
+                    <div class="h-12 w-12 bg-cyan-500/10 text-brandAccent rounded-lg flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Robot Guidance (2D/3D)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Seamless pick-and-place coordination, part alignment, and bin-picking solutions integrated directly into industrial robot arms.</p>
+                </div>
+                <span class="text-xs font-semibold text-brandAccent mt-6 block">Keyence Vision / Basler PGI Matrix</span>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-brandGrid p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
+                <div>
+                    <div class="h-12 w-12 bg-cyan-500/10 text-brandAccent rounded-lg flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-barcode"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Traceability & Metrology</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Sub-pixel precision measurements, high-speed multi-code 1D/2D reading, and complex OCR/OCV verification.</p>
+                </div>
+                <span class="text-xs font-semibold text-brandAccent mt-6 block">SensoPart Visor / Custom C# Solutions</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Strategy Section -->
+    <section id="why-us" class="py-20 bg-slate-900/40 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold tracking-tight mb-6">Why Manufacturers Partner with QuarkEdge</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="text-brandAccent mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-200">Hardware Agnostic Architecture</h4>
+                            <p class="text-sm text-slate-400 mt-1">We don't force a platform. We mathematically match lenses, sensors, lighting, and computing power to your specific cycle times and tolerances.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-brandAccent mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-200">Complete Integration Stack</h4>
+                            <p class="text-sm text-slate-400 mt-1">From camera mounting geometry and customized illumination to PLC handshake protocols (Profinet/EtherNetIP) and custom HMI building.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-brandGrid p-8 rounded-xl border border-slate-700/50">
+                <h3 class="text-xl font-bold mb-4 text-brandAccent"><i class="fa-solid fa-gears mr-2"></i> System Execution Specs</h3>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li class="flex justify-between py-2 border-b border-slate-800"><span>Field of View Optimization</span> <span class="text-slate-400 font-mono">Custom Built</span></li>
+                    <li class="flex justify-between py-2 border-b border-slate-800"><span>Deep Learning Deployment</span> <span class="text-slate-400 font-mono">HALCON / Cognex ViDi</span></li>
+                    <li class="flex justify-between py-2 border-b border-slate-800"><span>Communications Support</span> <span class="text-slate-400 font-mono">TCP/IP, Fieldbus, OPC UA</span></li>
+                    <li class="flex justify-between py-2"><span>Camera Interfaces</span> <span class="text-slate-400 font-mono">GigE Vision, USB3, CoaXPress</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Scoping / Contact Form -->
+    <section id="contact" class="py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold">Scope Your Vision Project</h2>
+            <p class="mt-3 text-slate-400">Fill out your system parameters, and our engineering desk will evaluate your application requirements.</p>
+        </div>
+
+        <form class="bg-brandGrid p-8 rounded-2xl border border-slate-800 space-y-6 shadow-xl" onsubmit="event.preventDefault(); alert('Inquiry received! QuarkEdge Engineering will contact you shortly.');">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Company Name</label>
+                    <input type="text" required class="w-full bg-brandDark border border-slate-700 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Engineering Contact Email</label>
+                    <input type="email" required class="w-full bg-brandDark border border-slate-700 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-slate-300 mb-2">Primary Vision Application</label>
+                <select class="w-full bg-brandDark border border-slate-700 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition">
+                    <option>Defect Detection / Quality Control</option>
+                    <option>Robot Guidance / Positioning</option>
+                    <option>High Precision Metrology / Measurement</option>
+                    <option>Code Reading & Identification (OCR/Barcode)</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-slate-300 mb-2">Preferred Tech Stack (If Any)</label>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+                    <label class="flex items-center gap-2 bg-brandDark/50 p-3 rounded border border-slate-700 cursor-pointer"><input type="checkbox" class="accent-brandAccent"> Cognex</label>
+                    <label class="flex items-center gap-2 bg-brandDark/50 p-3 rounded border border-slate-700 cursor-pointer"><input type="checkbox" class="accent-brandAccent"> Keyence</label>
+                    <label class="flex items-center gap-2 bg-brandDark/50 p-3 rounded border border-slate-700 cursor-pointer"><input type="checkbox" class="accent-brandAccent"> Halcon</label>
+                    <label class="flex items-center gap-2 bg-brandDark/50 p-3 rounded border border-slate-700 cursor-pointer"><input type="checkbox" class="accent-brandAccent"> Basler</label>
+                    <label class="flex items-center gap-2 bg-brandDark/50 p-3 rounded border border-slate-700 cursor-pointer"><input type="checkbox" class="accent-brandAccent"> SensoPart</label>
+                    <label class="flex items-center gap-2 bg-brandDark/50 p-3 rounded border border-slate-700 cursor-pointer"><input type="checkbox" class="accent-brandAccent"> No Preference</label>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-slate-300 mb-2">Briefly Describe the Part, Cycle Time, and Inspection Criteria</label>
+                <textarea rows="4" placeholder="e.g., Inspecting automotive metallic welds for surface pores within a 250ms cycle time..." class="w-full bg-brandDark border border-slate-700 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-brandAccent text-brandDark font-bold rounded-md hover:bg-cyan-400 transition tracking-wide text-sm uppercase">
+                Submit System Request
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-8 text-center text-sm text-slate-500">
+        <p>&copy; 2026 QuarkEdge Solutions. All rights reserved. Industrial Machine Vision Integrators.</p>
+    </footer>
+
+</body>
+</html>
