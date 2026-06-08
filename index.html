@@ -162,7 +162,6 @@
                     </ul>
                 </div>
                 <div class="md:col-span-5 rounded-lg overflow-hidden border border-slate-800">
-                    <!-- Updated with a highly realistic automation lab testing bench featuring multi-camera rigs (Cognex and Keyence configurations) -->
                     <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?auto=format&fit=crop&w=800&q=80" alt="Machine vision laboratory bench testing assembly profiles using Cognex In-Sight and Keyence XG sensors on an aluminum structural profile extrusion rig" class="w-full h-56 object-cover">
                 </div>
             </div>
@@ -471,8 +470,8 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-slate-200 text-xs uppercase tracking-wider font-mono">Engineering Escalations</h4>
-                                    <a href="mailto:dharshanashree@quarkedgesolutions.com" class="text-brandAccent hover:underline text-xs block mt-1 break-all">
-                                        dharshanashree@quarkedgesolutions.com
+                                    <a href="mailto:info@quarkedgesolutions.com" class="text-brandAccent hover:underline text-xs block mt-1 break-all">
+                                        info@quarkedgesolutions.com
                                     </a>
                                 </div>
                             </div>
@@ -500,62 +499,57 @@
                     </div>
                 </div>
 
-                <!-- Technical Specification Processing Form -->
-<!-- Updated Technical Specification Processing Form Block -->
-<div class="lg:col-span-7">
-    <!-- 1. Change the form tag to point to the form processor API -->
-    <form action="https://api.web3forms.com/submit" method="POST" class="bg-brandGrid p-8 rounded-2xl border border-slate-850 space-y-6 shadow-2xl">
-        
-        <!-- 2. Hidden Access Key (You get this free from web3forms.com or formspree.io registered to your email) -->
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-        
-        <!-- 3. Optional: Redirect users to a thank you page or keep them on the page -->
-        <input type="hidden" name="subject" value="New Website Inquiry - QuarkEdge Solutions">
-        <input type="hidden" name="from_name" value="QuarkEdge Web Bot">
+                <!-- Live Technical Specification Processing Form -->
+                <div class="lg:col-span-7">
+                    <form action="https://formsubmit.co/info@quarkedgesolutions.com" method="POST" class="bg-brandGrid p-8 rounded-2xl border border-slate-850 space-y-6 shadow-2xl">
+                        
+                        <!-- Anti-Spam HoneyPot & Custom Configuration Options -->
+                        <input type="hidden" name="_honey" style="display:none">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Engineering Inquiry - QuarkEdge Solutions Website">
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Company Name</label>
+                                <input type="text" name="Company Name" required class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Engineering Contact Email</label>
+                                <input type="email" name="Email Address" required class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
+                            </div>
+                        </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
-            <div>
-                <label class="block text-sm font-medium text-slate-300 mb-2">Company Name</label>
-                <!-- NOTE: Added 'name' attributes to inputs so the email service knows what data it's sending -->
-                <input type="text" name="company" required class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-slate-300 mb-2">Engineering Contact Email</label>
-                <input type="email" name="email" required class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
-            </div>
-        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Target Request Path</label>
+                                <select name="Target Request Type" class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
+                                    <option>Emergency Line / On-Site Support</option>
+                                    <option>Solution Redesign & Feasibility Evaluation</option>
+                                    <option>Production Ramp-Up / Cycle Time Optimization</option>
+                                    <option>Custom Vision Solution Architecture Build</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Target Programming Platform</label>
+                                <select name="Vision Platform Type" class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
+                                    <option>Cognex In-Sight / VisionPro Platforms</option>
+                                    <option>Keyence CV / XG Systems Programming</option>
+                                    <option>Custom PC-Based Application Development</option>
+                                    <option>Undetermined / Open Evaluation</option>
+                                </select>
+                            </div>
+                        </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
-            <div>
-                <label class="block text-sm font-medium text-slate-300 mb-2">Target Request Path</label>
-                <select name="request_type" class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
-                    <option>Emergency Line / On-Site Support</option>
-                    <option>Solution Redesign & Feasibility Evaluation</option>
-                    <option>Production Ramp-Up / Cycle Time Optimization</option>
-                    <option>Custom Vision Solution Architecture Build</option>
-                </select>
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-slate-300 mb-2">Target Programming Platform</label>
-                <select name="platform" class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
-                    <option>Cognex In-Sight / VisionPro Platforms</option>
-                    <option>Keyence CV / XG Systems Programming</option>
-                    <option>Custom PC-Based Application Development</option>
-                    <option>Undetermined / Open Evaluation</option>
-                </select>
-            </div>
-        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Project Parameter Details (Parts description, cycle speed, or target validation parameters)</label>
+                            <textarea name="Project Parameter Details" rows="4" placeholder="Describe the materials, geometry, speed restrictions, and target defects. Example: Battery tracking trace validation demanding a documented Gage R&R cycle under 10% deviation boundaries..." class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-xs leading-relaxed"></textarea>
+                        </div>
 
-        <div>
-            <label class="block text-sm font-medium text-slate-300 mb-2">Project Parameter Details (Parts description, cycle speed, or target validation parameters)</label>
-            <textarea name="project_details" rows="4" placeholder="Describe the materials, geometry, speed restrictions, and target defects..." class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-xs leading-relaxed"></textarea>
-        </div>
-
-        <button type="submit" class="w-full py-4 bg-brandAccent text-brandDark font-bold rounded-md hover:bg-cyan-400 transition tracking-wider text-sm uppercase">
-            Submit Specifications to Engineering Desk
-        </button>
-    </form>
-</div>
+                        <button type="submit" class="w-full py-4 bg-brandAccent text-brandDark font-bold rounded-md hover:bg-cyan-400 transition tracking-wider text-sm uppercase">
+                            Submit Specifications to Engineering Desk
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
