@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuarkEdge Solutions | Turn-Key Vision System Integration</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#090d16',
+                        brandGrid: '#111a2e',
+                        brandAccent: '#06b6d4', 
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-brandAccent selection:text-brandDark">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="Gemini_Generated_Image_42ubad42ubad42ub.png" alt="QuarkEdge Solutions Logo" class="h-12 w-auto object-contain">
+            </div>
+            
+            <!-- Nav Links & Language Selector -->
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" data-i18n="nav_about" class="hover:text-brandAccent transition">About Us</a>
+                <a href="#process" data-i18n="nav_process" class="hover:text-brandAccent transition">Integration Process</a>
+                <a href="#activities" data-i18n="nav_activities" class="hover:text-brandAccent transition">Engineering Activities</a>
+                <a href="#programming" data-i18n="nav_programming" class="hover:text-brandAccent transition">Vision Programming</a>
+                <a href="#capabilities" data-i18n="nav_capabilities" class="hover:text-brandAccent transition">Applications</a>
+                <a href="#industries" data-i18n="nav_industries" class="hover:text-brandAccent transition">Industries</a>
+                <a href="#contact" data-i18n="nav_contact" class="bg-brandAccent text-brandDark px-5 py-2.5 rounded-md font-semibold hover:bg-cyan-400 transition">Contact Engineer</a>
+                
+                <!-- Language Selector Dropdown -->
+                <div class="relative inline-block text-left ml-2">
+                    <select id="langSelector" onchange="switchLanguage(this.value)" class="bg-slate-900 text-slate-100 border border-slate-700 rounded-md px-3 py-1.5 text-xs focus:outline-none focus:border-brandAccent cursor-pointer font-mono">
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="it">🇮🇹 IT</option>
+                        <option value="de">🇩🇪 DE</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative py-24 md:py-32 overflow-hidden border-b border-slate-900">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-cyan-500/10 text-brandAccent border border-cyan-500/20 mb-6">
+                <span class="w-2 h-2 rounded-full bg-brandAccent animate-pulse"></span> <span data-i18n="hero_badge">Complete System Lifecycle Management</span>
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-5xl mx-auto leading-tight" data-i18n="hero_title">
+                Turn-Key Vision System Integration: <br><span class="bg-gradient-to-r from-brandAccent to-blue-500 bg-clip-text text-transparent">From Concept to Validated Reality.</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto" data-i18n="hero_desc">
+                We design, deploy, and validate advanced machine vision solutions that eliminate defects, automate inspection, and guarantee compliance.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#contact" data-i18n="hero_btn_consult" class="px-8 py-4 bg-brandAccent text-brandDark font-bold rounded-md hover:bg-cyan-400 shadow-lg shadow-cyan-500/20 transition transform hover:-translate-y-0.5">
+                    Schedule a Technical Consultation
+                </a>
+                <a href="#contact" data-i18n="hero_btn_poc" class="px-8 py-4 bg-slate-800 text-slate-200 font-bold rounded-md hover:bg-slate-700 transition border border-slate-700">
+                    Request a Proof of Concept
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Client Portfolio Logobar -->
+    <section class="py-12 bg-slate-950/80 border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-center text-xs font-mono tracking-widest text-slate-500 uppercase mb-8" data-i18n="logo_bar_text">Trusted by Production Teams & Tier-1 OEMs Worldwide</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center">
+                <img src="images.png" alt="Volvo Logo" class="h-12 md:h-14 object-contain brightness-90 contrast-125">
+                <img src="logo@3x.png" alt="Symbio Hydrogen Logo" class="h-10 md:h-12 object-contain brightness-90">
+                <img src="image_9297_0.jpg" alt="MAN Battery Module Logo" class="h-12 md:h-16 object-contain brightness-90 invert">
+                <img src="mercedes-benz-logo-png_seeklogo-190348.png" alt="Mercedes-Benz Logo" class="h-14 md:h-16 object-contain brightness-90 invert">
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Introduction Section -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-900">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <span class="text-xs font-bold font-mono text-brandAccent uppercase tracking-widest" data-i18n="about_badge">Who We Are</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight" data-i18n="about_title">
+                    Elite Industrial Machine Vision Engineering
+                </h2>
+                <p class="text-slate-400 leading-relaxed" data-i18n="about_p1">
+                    At QuarkEdge Solutions, we bridge the gap between complex optical physics and rugged factory floor realities. With years of hands-on experience designing, debugging, and deploying high-performance industrial vision systems, we engineer stable setups that withstand ambient light fluctuations, physical vibrations, and blistering line cycle times.
+                </p>
+                <p class="text-slate-400 leading-relaxed" data-i18n="about_p2">
+                    Our multi-disciplinary team brings deep expertise in advanced digital optics, mechanical brackets, and control frameworks. Beyond fresh installations, we specialize extensively in on-site plant support, redesigning failing solutions, and optimizing camera execution logic to help clients navigate strict manufacturing environments safely.
+                </p>
+                <div class="grid grid-cols-3 gap-6 pt-4 border-t border-slate-850">
+                    <div>
+                        <div class="text-2xl font-extrabold text-brandAccent">100%</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mt-1" data-i18n="about_stat1">Vendor Agnostic</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-extrabold text-brandAccent">&lt;10%</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mt-1" data-i18n="about_stat2">Gage R&R Targets</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-extrabold text-brandAccent">On-Site</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mt-1" data-i18n="about_stat3">Support & Triage</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                <div class="bg-brandGrid/40 p-6 rounded-xl border border-slate-850 space-y-2">
+                    <div class="w-8 h-8 rounded bg-cyan-500/10 flex items-center justify-center text-brandAccent mb-3"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h4 class="font-bold text-white text-sm" data-i18n="about_card1_title">Site Support</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed" data-i18n="about_card1_desc">Rapid on-site emergency support, runtime fine-tuning, and direct plant floor hardware calibration.</p>
+                </div>
+                <div class="bg-brandGrid/40 p-6 rounded-xl border border-slate-850 space-y-2">
+                    <div class="w-8 h-8 rounded bg-cyan-500/10 flex items-center justify-center text-brandAccent mb-3"><i class="fa-solid fa-arrows-spin"></i></div>
+                    <h4 class="font-bold text-white text-sm" data-i18n="about_card2_title">Solution Redesign</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed" data-i18n="about_card2_desc">Remediating legacy or poorly designed third-party systems that trigger high false-reject rates.</p>
+                </div>
+                <div class="bg-brandGrid/40 p-6 rounded-xl border border-slate-850 space-y-2">
+                    <div class="w-8 h-8 rounded bg-cyan-500/10 flex items-center justify-center text-brandAccent mb-3"><i class="fa-solid fa-gauge-high"></i></div>
+                    <h4 class="font-bold text-white text-sm" data-i18n="about_card3_title">Cycle Optimization</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed" data-i18n="about_card3_desc">Trimming tool execution algorithms to clear fast line cycles without missing inspections.</p>
+                </div>
+                <div class="bg-brandGrid/40 p-6 rounded-xl border border-slate-850 space-y-2">
+                    <div class="w-8 h-8 rounded bg-cyan-500/10 flex items-center justify-center text-brandAccent mb-3"><i class="fa-solid fa-gears"></i></div>
+                    <h4 class="font-bold text-white text-sm" data-i18n="about_card4_title">Custom Architectures</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed" data-i18n="about_card4_desc">Building non-standard lighting, multi-camera arrays, and fully customized software frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End-to-End Integration Process -->
+    <section id="process" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <h2 class="text-3xl sm:text-4xl font-bold" data-i18n="proc_main_title">Our End-to-End Integration Process</h2>
+            <p class="mt-4 text-slate-400" data-i18n="proc_main_desc">We don't just "mount cameras." We manage the entire machine vision development lifecycle to eliminate execution risk.</p>
+        </div>
+
+        <div class="space-y-16">
+            <!-- Phase 1 -->
+            <div class="grid md:grid-cols-12 gap-8 items-center bg-brandGrid/30 p-8 rounded-2xl border border-slate-850">
+                <div class="md:col-span-7 space-y-4">
+                    <span class="text-xs font-bold font-mono text-brandAccent uppercase tracking-widest">Phase 1</span>
+                    <h3 class="text-2xl font-bold text-white" data-i18n="proc_p1_title">Feasibility & Proof of Concept (PoC)</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed" data-i18n="proc_p1_desc">Before you invest, we mitigate your risk. We analyze your parts and environment to guarantee success.</p>
+                    <ul class="space-y-2 text-xs text-slate-300 list-none pl-0">
+                        <li class="flex items-start gap-2">
+                            <span class="text-brandAccent font-bold">✓</span>
+                            <span data-i18n="proc_p1_li1"><strong>Sample Testing & Feasibility Studies:</strong> Testing your actual physical parts inside our specialized vision engineering lab environments.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brandAccent font-bold">✓</span>
+                            <span data-i18n="proc_p1_li2"><strong>Lighting & Optics Selection:</strong> Determining exact wavelengths (UV, IR, Polarized) and lens arrays needed.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brandAccent font-bold">✓</span>
+                            <span data-i18n="proc_p1_li3"><strong>PoC Report:</strong> Providing a detailed feasibility report containing real baseline sample images and predictable accuracy limits before hardware orders.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:col-span-5 rounded-lg overflow-hidden border border-slate-800">
+                    <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?auto=format&fit=crop&w=800&q=80" alt="Machine vision laboratory bench testing assembly profiles" class="w-full h-56 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tactical Execution / Engineering Support -->
+    <section id="activities" class="py-24 bg-brandGrid/20 border-y border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold font-mono text-brandAccent uppercase tracking-widest" data-i18n="act_badge">Tactical Execution</span>
+                <h2 class="text-3xl font-bold text-white mt-1" data-i18n="act_title">Targeted Engineering & Plant Floor Support</h2>
+                <p class="mt-3 text-slate-400 text-sm" data-i18n="act_desc">We don't just supply new parts. We fix, optimize, and ramp up vision systems under high-pressure plant constraints.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 bg-brandGrid/60 rounded-xl border border-slate-800 space-y-3">
+                    <div class="text-brandAccent text-xl"><i class="fa-solid fa-house-laptop"></i></div>
+                    <h3 class="text-md font-bold text-white" data-i18n="act_c1_title">On-Site Support & Troubleshooting</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-i18n="act_c1_desc">When a camera drops off line networks or yields erratic false-failures, our team deploys directly to your plant floor to troubleshoot hardware, clean/re-align optics, and fix communication handshakes.</p>
+                </div>
+                <div class="p-6 bg-brandGrid/60 rounded-xl border border-slate-800 space-y-3">
+                    <div class="text-brandAccent text-xl"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="text-md font-bold text-white" data-i18n="act_c2_title">Redesigning Existing Solutions</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-i18n="act_c2_desc">Stuck with an underperforming system? We evaluate existing legacy configurations, retrofitting optimized industrial lighting setups, proper filtering, or rewriting scripts to transform broken systems into high-yielding assets.</p>
+                </div>
+                <div class="p-6 bg-brandGrid/60 rounded-xl border border-slate-800 space-y-3">
+                    <div class="text-brandAccent text-xl"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="text-md font-bold text-white" data-i18n="act_c3_title">Production Ramp-Up Support</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-i18n="act_c3_desc">During critical launch windows, we offer dedicated engineering stand-by. We fine-tune parameter thresholds live as speeds scale up, tracking variations across actual production parts to lock down zero-defect validation signs.</p>
+                </div>
+                <div class="p-6 bg-brandGrid/60 rounded-xl border border-slate-800 space-y-3">
+                    <div class="text-brandAccent text-xl"><i class="fa-solid fa-stopwatch"></i></div>
+                    <h3 class="text-md font-bold text-white" data-i18n="act_c4_title">Cycle Time Remediation</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-i18n="act_c4_desc">If vision processing blocks block automation throughput, we optimize code. By auditing software execution tool paths, balancing lighting strobes, and optimizing camera exposure times, we trim key milliseconds out of tight cycles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Contact Form Section -->
+    <section id="contact" class="py-24 bg-gradient-to-b from-brandDark to-slate-950 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight" data-i18n="contact_title">Ready to Eliminate Inspection Errors?</h2>
+                <p class="mt-3 text-slate-400" data-i18n="contact_desc">Reach out to our engineering desk directly or drop your system specifications below to coordinate an inline feasibility assessment.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <!-- Corporate Address Box -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-brandGrid/40 p-8 rounded-2xl border border-slate-850 space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white tracking-wide uppercase font-mono text-brandAccent">QUARK EDGE SOLUTIONS UK LTD</h3>
+                            <p class="text-xs text-slate-500 mt-1" data-i18n="contact_sub_title">Registered Systems Integration Facility</p>
+                        </div>
+                        <hr class="border-slate-800">
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4 text-sm">
+                                <div class="w-10 h-10 rounded bg-slate-900 border border-slate-800 flex items-center justify-center text-brandAccent shrink-0 mt-0.5"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-200 text-xs uppercase tracking-wider font-mono" data-i18n="hq_title">Headquarters</h4>
+                                    <p class="text-slate-400 text-xs mt-1 leading-relaxed">2a Heigham Road C/O Nirapp Ltd,<br>Imperial Offices, London,<br>England, E6 2JG</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Form Mapping -->
+                <div class="lg:col-span-7">
+                    <form action="https://formsubmit.co/info@quarkedgesolutions.com" method="POST" class="bg-brandGrid p-8 rounded-2xl border border-slate-850 space-y-6 shadow-2xl">
+                        <input type="hidden" name="_honey" style="display:none">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Engineering Inquiry - QuarkEdge Solutions Website">
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2" data-i18n="f_comp">Company Name</label>
+                                <input type="text" name="Company Name" required class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2" data-i18n="f_mail">Engineering Contact Email</label>
+                                <input type="email" name="Email Address" required class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2" data-i18n="f_details">Project Parameter Details</label>
+                            <textarea name="Project Parameter Details" rows="4" class="w-full bg-brandDark border border-slate-800 rounded-md px-4 py-3 text-slate-100 focus:outline-none focus:border-brandAccent transition text-xs leading-relaxed"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-brandAccent text-brandDark font-bold rounded-md hover:bg-cyan-400 transition tracking-wider text-sm uppercase" data-i18n="f_btn">
+                            Submit Specifications to Engineering Desk
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-8 text-center text-xs text-slate-500">
+        <p data-i18n="footer_text">&copy; 2026 QuarkEdge Solutions. Turnkey Integration & Systems Validated via MSA / Gage R&R Standards.</p>
+    </footer>
+
+    <!-- TRANSLATION SCRIPT LOGIC -->
+    <script>
+        const translations = {
+            en: {
+                nav_about: "About Us",
+                nav_process: "Integration Process",
+                nav_activities: "Engineering Activities",
+                nav_programming: "Vision Programming",
+                nav_capabilities: "Applications",
+                nav_industries: "Industries",
+                nav_contact: "Contact Engineer",
+                hero_badge: "Complete System Lifecycle Management",
+                hero_title: "Turn-Key Vision System Integration: <br><span class='bg-gradient-to-r from-brandAccent to-blue-500 bg-clip-text text-transparent'>From Concept to Validated Reality.</span>",
+                hero_desc: "We design, deploy, and validate advanced machine vision solutions that eliminate defects, automate inspection, and guarantee compliance.",
+                hero_btn_consult: "Schedule a Technical Consultation",
+                hero_btn_poc: "Request a Proof of Concept",
+                logo_bar_text: "Trusted by Production Teams & Tier-1 OEMs Worldwide",
+                about_badge: "Who We Are",
+                about_title: "Elite Industrial Machine Vision Engineering",
+                about_p1: "At QuarkEdge Solutions, we bridge the gap between complex optical physics and rugged factory floor realities. With years of hands-on experience designing, debugging, and deploying high-performance industrial vision systems, we engineer stable setups that withstand ambient light fluctuations, physical vibrations, and blistering line cycle times.",
+                about_p2: "Our multi-disciplinary team brings deep expertise in advanced digital optics, mechanical brackets, and control frameworks. Beyond fresh installations, we specialize extensively in on-site plant support, redesigning failing solutions, and optimizing camera execution logic to help clients navigate strict manufacturing environments safely.",
+                about_stat1: "Vendor Agnostic",
+                about_stat2: "Gage R&R Targets",
+                about_stat3: "Support & Triage",
+                about_card1_title: "Site Support",
+                about_card1_desc: "Rapid on-site emergency support, runtime fine-tuning, and direct plant floor hardware calibration.",
+                about_card2_title: "Solution Redesign",
+                about_card2_desc: "Remediating legacy or poorly designed third-party systems that trigger high false-reject rates.",
+                about_card3_title: "Cycle Optimization",
+                about_card3_desc: "Trimming tool execution algorithms to clear fast line cycles without missing inspections.",
+                about_card4_title: "Custom Architectures",
+                about_card4_desc: "Building non-standard lighting, multi-camera arrays, and fully customized software frameworks.",
+                proc_main_title: "Our End-to-End Integration Process",
+                proc_main_desc: "We don't just 'mount cameras.' We manage the entire machine vision development lifecycle to eliminate execution risk.",
+                proc_p1_title: "Feasibility & Proof of Concept (PoC)",
+                proc_p1_desc: "Before you invest, we mitigate your risk. We analyze your parts and environment to guarantee success.",
+                proc_p1_li1: "<strong>Sample Testing & Feasibility Studies:</strong> Testing your actual physical parts inside our specialized vision engineering lab environments.",
+                proc_p1_li2: "<strong>Lighting & Optics Selection:</strong> Determining exact wavelengths (UV, IR, Polarized) and lens arrays needed.",
+                proc_p1_li3: "<strong>PoC Report:</strong> Providing a detailed feasibility report containing real baseline sample images and predictable accuracy limits before hardware orders.",
+                act_badge: "Tactical Execution",
+                act_title: "Targeted Engineering & Plant Floor Support",
+                act_desc: "We don't just supply new parts. We fix, optimize, and ramp up vision systems under high-pressure plant constraints.",
+                act_c1_title: "On-Site Support & Troubleshooting",
+                act_c1_desc: "When a camera drops off line networks or yields erratic false-failures, our team deploys directly to your plant floor to troubleshoot hardware, clean/re-align optics, and fix communication handshakes.",
+                act_c2_title: "Redesigning Existing Solutions",
+                act_c2_desc: "Stuck with an underperforming system? We evaluate existing legacy configurations, retrofitting optimized industrial lighting setups, proper filtering, or rewriting scripts to transform broken systems into high-yielding assets.",
+                act_c3_title: "Production Ramp-Up Support",
+                act_c3_desc: "During critical launch windows, we offer dedicated engineering stand-by. We fine-tune parameter thresholds live as speeds scale up, tracking variations across actual production parts to lock down zero-defect validation signs.",
+                act_c4_title: "Cycle Time Remediation",
+                act_c4_desc: "If vision processing blocks block automation throughput, we optimize code. By auditing software execution tool paths, balancing lighting strobes, and optimizing camera exposure times, we trim key milliseconds out of tight cycles.",
+                contact_title: "Ready to Eliminate Inspection Errors?",
+                contact_desc: "Reach out to our engineering desk directly or drop your system specifications below to coordinate an inline feasibility assessment.",
+                contact_sub_title: "Registered Systems Integration Facility",
+                hq_title: "Headquarters",
+                f_comp: "Company Name",
+                f_mail: "Engineering Contact Email",
+                f_details: "Project Parameter Details",
+                f_btn: "Submit Specifications to Engineering Desk",
+                footer_text: "© 2026 QuarkEdge Solutions. Turnkey Integration & Systems Validated via MSA / Gage R&R Standards."
+            },
+            it: {
+                nav_about: "Chi Siamo",
+                nav_process: "Processo di Integrazione",
+                nav_activities: "Attività di Ingegneria",
+                nav_programming: "Programmazione Visione",
+                nav_capabilities: "Applicazioni",
+                nav_industries: "Settori",
+                nav_contact: "Contatta Ingegnere",
+                hero_badge: "Gestione Completa del Ciclo di Vita del Sistema",
+                hero_title: "Integrazione Sistemi di Visione Chiavi in Mano: <br><span class='bg-gradient-to-r from-brandAccent to-blue-500 bg-clip-text text-transparent'>Dal Concetto alla Realtà Convalidata.</span>",
+                hero_desc: "Progettiamo, implementiamo e convalidiamo soluzioni avanzate di visione artificiale che eliminano i difetti, automatizzano l'ispezione e garantiscono la conformità normativa.",
+                hero_btn_consult: "Pianifica una Consulenza Tecnica",
+                hero_btn_poc: "Richiedi un Proof of Concept",
+                logo_bar_text: "Scelto dai Team di Produzione e OEM Tier-1 in Tutto il Mondo",
+                about_badge: "Chi Siamo",
+                about_title: "Ingegneria di Visione Artificiale Industriale d'Élite",
+                about_p1: "In QuarkEdge Solutions colmiamo il divario tra la fisica ottica complessa e le rigide realtà dei reparti produttivi. Grazie a anni di esperienza pratica nella progettazione, nel debug e nell'implementazione di sistemi di visione industriali ad alte prestazioni, sviluppiamo configurazioni stabili in grado di resistere alle variazioni della luce ambientale, alle vibrazioni meccaniche e a tempi di ciclo di linea estremamente rapidi.",
+                about_p2: "Il nostro team multidisciplinare vanta una profonda esperienza nell'ottica digitale avanzata, nelle staffe meccaniche personalizzate e nei framework di controllo automation. Oltre alle nuove installazioni, siamo specializzati nel supporto in loco negli stabilimenti, nella riprogettazione di soluzioni inefficienti e nell'ottimizzazione degli algoritmi delle telecamere.",
+                about_stat1: "Fornitore Agnostico",
+                about_stat2: "Obiettivi Gage R&R",
+                about_stat3: "Supporto e Triage",
+                about_card1_title: "Supporto in Loco",
+                about_card1_desc: "Pronto intervento in loco, ottimizzazione dei parametri runtime e calibrazione diretta dell'hardware di fabbrica.",
+                about_card2_title: "Riprogettazione Soluzioni",
+                about_card2_desc: "Risoluzione e aggiornamento di sistemi legacy o mal progettati da terze parti che causano alti tassi di scarto errato.",
+                about_card3_title: "Ottimizzazione Ciclo",
+                about_card3_desc: "Riduzione dei tempi di esecuzione degli strumenti software per soddisfare cicli di linea veloci senza perdere ispezioni.",
+                about_card4_title: "Architetture Custom",
+                about_card4_desc: "Sviluppo di sistemi di illuminazione non standard, array multi-camera e framework software completamente personalizzati.",
+                proc_main_title: "Il Nostro Processo di Integrazione End-to-End",
+                proc_main_desc: "Non ci limitiamo a 'montare telecamere'. Gestiamo l'intero ciclo di vita dello sviluppo della visione artificiale per eliminare qualsiasi rischio operativo.",
+                proc_p1_title: "Fattibilità e Proof of Concept (PoC)",
+                proc_p1_desc: "Prima che tu investa, mitighiamo il rischio. Analizziamo i tuoi componenti e l'ambiente per garantire il successo del sistema.",
+                proc_p1_li1: "<strong>Test Campioni e Studi di Fattibilità:</strong> Testiamo i tuoi pezzi fisici reali all'interno dei nostri laboratori specializzati in ingegneria della visione.",
+                proc_p1_li2: "<strong>Selezione Ottiche e Illuminazione:</strong> Determinazione delle lunghezze d'onda esatte (UV, IR, Polarizzata) e dei gruppi ottici necessari.",
+                proc_p1_li3: "<strong>Report di PoC:</strong> Fornitura di una relazione dettagliata sulla fattibilità contenente immagini campione reali e limiti di accuratezza prevedibili prima dell'ordine dell'hardware.",
+                act_badge: "Esecuzione Tattica",
+                act_title: "Ingegneria Mirata e Supporto nei Reparti Produttivi",
+                act_desc: "Non forniamo solo componenti nuovi. Ripariamo, ottimizziamo e acceleriamo i sistemi di visione sotto i vincoli di alta pressione dell'impianto.",
+                act_c1_title: "Supporto in Loco e Troubleshooting",
+                act_c1_desc: "Quando una telecamera si disconnette dalle reti di linea o genera scarti anomali, il nostro team interviene direttamente nel tuo stabilimento per riparare l'hardware e riallineare le ottiche.",
+                act_c2_title: "Riprogettazione dei Sistemi Esistenti",
+                act_c2_desc: "Bloccato con un sistema inefficiente? Valutiamo le configurazioni legacy esistenti, integrando illuminatori industriali ottimizzati, filtri adeguati o riscrivendo il codice software.",
+                act_c3_title: "Supporto al Ramp-Up della Produzione",
+                act_c3_desc: "Durante le fasi critiche di lancio, offriamo ingegneri dedicati in stand-by. Ottimizziamo le soglie dei parametri dal vivo mentre la velocità della linea aumenta.",
+                act_c4_title: "Rimedio ai Tempi di Ciclo",
+                act_c4_desc: "Se l'elaborazione della visione rallenta l'output dell'automazione, ottimizziamo il codice. Analizziamo i percorsi software per risparmiare millisecondi preziosi.",
+                contact_title: "Pronto a Eliminare gli Errori di Ispezione?",
+                contact_desc: "Contatta direttamente il nostro ufficio tecnico o inserisci le specifiche del tuo sistema qui sotto per coordinare una valutazione di fattibilità in linea.",
+                contact_sub_title: "Struttura Registrata di Integrazione Sistemi",
+                hq_title: "Sede Centrale",
+                f_comp: "Nome Azienda",
+                f_mail: "Email Contatto Tecnico",
+                f_details: "Dettagli dei Parametri del Progetto",
+                f_btn: "Invia Specifiche all'Ufficio Tecnico",
+                footer_text: "© 2026 QuarkEdge Solutions. Integrazione Chiavi in Mano e Sistemi Convalidati secondo gli Standard MSA / Gage R&R."
+            },
+            de: {
+                nav_about: "Über Uns",
+                nav_process: "Integrationsprozess",
+                nav_activities: "Engineering-Aktivitäten",
+                nav_programming: "Bildverarbeitung",
+                nav_capabilities: "Anwendungen",
+                nav_industries: "Branchen",
+                nav_contact: "Ingenieur Kontaktieren",
+                hero_badge: "Komplettes System-Lebenszyklus-Management",
+                hero_title: "Schlüsselfertige Bildverarbeitungssystem-Integration: <br><span class='bg-gradient-to-r from-brandAccent to-blue-500 bg-clip-text text-transparent'>Vom Konzept zur validierten Realität.</span>",
+                hero_desc: "Wir entwickeln, implementieren und validieren fortschrittliche industrielle Bildverarbeitungslösungen, die Defekte eliminieren, Inspektionen automatisieren und Compliance garantieren.",
+                hero_btn_consult: "Technisches Beratungsgespräch vereinbaren",
+                hero_btn_poc: "Proof of Concept anfordern",
+                logo_bar_text: "Vertraut von Produktionsteams & Tier-1-OEMs weltweit",
+                about_badge: "Wer Wir Sind",
+                about_title: "Elite-Engineering für industrielle Bildverarbeitung",
+                about_p1: "Bei QuarkEdge Solutions schließen wir die Lücke zwischen komplexer optischer Physik und den harten Realitäten in der Fabrikhalle. Mit jahrelanger praktischer Erfahrung in der Entwicklung, Fehlersuche und Implementierung von Hochleistungs-Bildverarbeitungssystemen projektieren wir stabile Setups, die Umgebungslichtschwankungen, Vibrationen und extrem schnellen Taktzeiten standhalten.",
+                about_p2: "Unser multidisziplinäres Team bringt tiefes Fachwissen in fortschrittlicher digitaler Optik, mechanischen Halterungen und Automatisierungs-Frameworks ein. Neben Neuinstallationen sind wir auf Werksunterstützung vor Ort, die Neugestaltung fehlerhafter Altsysteme und die Optimierung der Kamera-Ausführungslogik spezialisiert.",
+                about_stat1: "Herstellerunabhängig",
+                about_stat2: "Gage R&R Ziele",
+                about_stat3: "Support & Triage",
+                about_card1_title: "Werks-Support",
+                about_card1_desc: "Schnelle Notfallhilfe vor Ort, Runtime-Feinabstimmung und direkte Hardware-Kalibrierung in der Produktionslinie.",
+                about_card2_title: "System-Redesign",
+                about_card2_desc: "Behebung von Problemen bei fehlerhaften Altsystemen von Drittanbietern, die hohe Pseudoausschuss-Raten verursachen.",
+                about_card3_title: "Taktzeit-Optimierung",
+                about_card3_desc: "Kürzung von Software-Algorithmen, um schnelle Linientakte einzuhalten, ohne Prüfschritte zu überspringen.",
+                about_card4_title: "Spezialarchitekturen",
+                about_card4_desc: "Bau von Sonderbeleuchtungen, Multikamerasystemen und vollständig maßgeschneiderten Software-Frameworks.",
+                proc_main_title: "Unser End-to-End Integrationsprozess",
+                proc_main_desc: "Wir montieren nicht nur Kameras. Wir steuern den gesamten Entwicklungslebenszyklus der industriellen Bildverarbeitung, um Projektrisiken auszuschließen.",
+                proc_p1_title: "Machbarkeit & Proof of Concept (PoC)",
+                proc_p1_desc: "Bevor Sie investieren, minimieren wir Ihr Risiko. Wir analysieren Ihre Bauteile und die Umgebung, um den Erfolg zu garantieren.",
+                proc_p1_li1: "<strong>Musterprüfung & Machbarkeitsstudien:</strong> Testen Ihrer realen physischen Bauteile in unseren spezialisierten Optik- und Prüflaboren.",
+                proc_p1_li2: "<strong>Beleuchtungs- & Optikauswahl:</strong> Bestimmung der exakten Wellenlängen (UV, IR, polarisiert) und der erforderlichen Kameraobjektive.",
+                proc_p1_li3: "<strong>PoC-Bericht:</strong> Bereitstellung eines detaillierten Machbarkeitsberichts mit echten Musterbildern und vorhersagbaren Genauigkeitsgrenzen vor der Hardwarebestellung.",
+                act_badge: "Taktische Ausführung",
+                act_title: "Gezieltes Engineering & Support in der Fabrikhalle",
+                act_desc: "Wir liefern nicht nur Neuteile. Wir reparieren, optimieren und begleiten Bildverarbeitungssysteme unter hohem Produktionsdruck.",
+                act_c1_title: "Vor-Ort-Support & Fehlersuche",
+                act_c1_desc: "Wenn eine Kamera das Netzwerk verliert oder sporadische Fehler meldet, kommt unser Team direkt in Ihr Werk, um Hardware zu prüfen und Optiken neu auszurichten.",
+                act_c2_title: "Redesign bestehender Lösungen",
+                act_c2_desc: "Probleme mit einem unzuverlässigen System? Wir analysieren Altsysteme, rüsten optimierte Beleuchtungen nach und schreiben Auswerteskripte neu.",
+                act_c3_title: "Produktionsanlauf-Support (Ramp-Up)",
+                act_c3_desc: "In kritischen Anlaufphasen bieten wir dedizierten Stand-by-Support durch unsere Projektingenieure. Wir optimieren Schwellwerte live bei steigender Liniengeschwindigkeit.",
+                act_c4_title: "Taktzeit-Behebung",
+                act_c4_desc: "Wenn die Bildverarbeitung den Automatisierungsdurchsatz ausbremst, optimieren wir den Code und sparen wertvolle Millisekunden ein.",
+                contact_title: "Bereit, Prüffehler komplett zu eliminieren?",
+                contact_desc: "Wenden Sie sich direkt an unsere Projektabteilung oder tragen Sie Ihre Systemanforderungen unten ein, um eine Machbarkeitsprüfung zu vereinbaren.",
+                contact_sub_title: "Registrierter Systemintegrationsbetrieb",
+                hq_title: "Hauptsitz",
+                f_comp: "Firmenname",
+                f_mail: "Technische Kontakt-E-Mail",
+                f_details: "Projektspezifische Parameter & Details",
+                f_btn: "Spezifikationen an die Projektabteilung senden",
+                footer_text: "© 2026 QuarkEdge Solutions. Schlüsselfertige Integration & Systeme validiert nach MSA / Gage R&R Standards."
+            }
+        };
+
+        function switchLanguage(lang) {
+            // Update document lang attribute
+            document.documentElement.lang = lang;
+            
+            // Loop through all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            
+            // Optional: Save selection to local storage
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        // Auto-load saved language preference on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'en';
+            document.getElementById('langSelector').value = savedLang;
+            switchLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
